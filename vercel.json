@@ -1,0 +1,17 @@
+{
+  "buildCommand": "pip install -r requirements.txt",
+  "framework": "streamlit",
+  "outputDirectory": ".",
+  "builds": [
+    {
+      "src": "try.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "try.py"
+    }
+  ]
+}
