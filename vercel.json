@@ -1,17 +1,14 @@
 {
-  "buildCommand": "pip install -r requirements.txt",
-  "framework": "streamlit",
-  "outputDirectory": ".",
   "builds": [
     {
-      "src": "try.py",
+      "src": "api/index.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "try.py"
+      "dest": "api/index.py"
     }
   ]
 }
