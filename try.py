@@ -10,10 +10,11 @@ import random
 import sqlite3
 import pandas as pd
 from difflib import SequenceMatcher
+import os
 
 # Access your API key
-OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
-PINECONE_API_KEY = st.secrets["PINECONE_API_KEY"]
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 INDEX_NAME = "college-buddy"
 
 # Initialize OpenAI
